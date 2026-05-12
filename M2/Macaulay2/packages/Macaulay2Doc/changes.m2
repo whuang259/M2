@@ -6,6 +6,7 @@ document {
      Key => "changes to Macaulay2, by version",
      Subnodes => {
 	  -- TO "changes made for the next release",
+	  TO "changes, 1.26.06",
 	  TO "changes, 1.26.05",
 	  TO "changes, 1.25.11",
 	  TO "changes, 1.25.05",
@@ -66,6 +67,27 @@ changesHelper List := opt -> pkgnames -> (
 	    << (if opt.Certification then "published" else "added")
 	    << ".\" },"
 	    << endl)))
+
+document {
+    Key => "changes, 1.26.06",
+    UL {
+	LI { "new packages:",
+	    UL {
+		LI { TO "DirectSummands::DirectSummands", ", a package by Devlin Mallory and Mahrud Sayrafi for computing direct sum decompositions of modules and coherent sheaves, has been added." },
+		},
+	    },
+	LI { "improved packages:" ,
+	    UL {
+		LI { TO "FastMinors::FastMinors", " has been updated to version 1.3.1, fixing a bug in ", TO "FastMinors::projDim", " and adding functionality to verify non-regularity in codimension $n$ via ", TO "FastMinors :: regularInCodimension(...,VerifyNonRegular=>...)", ", together with corresponding documentation and tests." },
+		},
+	    },
+	LI { "functionality added or improved:",
+	    UL {
+		LI { "Using ", TO "augmented assignment", " with mutable hash tables is now thread safe." },
+		},
+	    },
+	}
+    }
 
 document {
     Key => "changes, 1.26.05",
